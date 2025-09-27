@@ -61,7 +61,7 @@ Functional Simulation:
 
 */Program  for  4-Bit Up-Down Counter
 
-`timescale 1ps / 1 ps
+```timescale 1ps / 1 ps
 module counter(clk,m,rst,count);
 input clk,m,rst;
 output reg [3:0] count;
@@ -75,7 +75,7 @@ else
 count=count-1;
 end
 endmodule
-
+```
 	Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
 ## Creating Test bench:
@@ -86,7 +86,7 @@ endmodule
 
 */Test bench Program  for  4-Bit Up-Down Counter
 
-`timescale 1ns / 1ns
+```timescale 1ns / 1ns
 module counter_tb;
 reg clk,rst,m;
 wire[3:0] count;
@@ -108,7 +108,7 @@ initial $monitor("Time=%t rst=%b clk=%b count=%b", $time,rst,clk,count);
 
 initial
 #320 $finish;
-endmodule
+endmodule```
 
 ### To Launch Simulation tool
 	linux:/> nclaunch -new&            // “-new” option is used for invoking NCVERILOG for the first time for any design
